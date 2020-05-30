@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="580.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.generator.barcode.project.controller.SettingController">
+   <children>
+      <Text layoutX="68.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ARCODE DETAILS">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <Text fill="#e5b90e" layoutX="27.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
+         <font>
+            <Font name="FreeSerif" size="60.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtBarcodeNo" labelFloat="true" layoutX="23.0" layoutY="101.0" onKeyPressed="#OnKeyPressed" prefHeight="26.0" prefWidth="572.0" promptText="Item Barcode" />
+      <JFXTextField fx:id="txtItemName" labelFloat="true" layoutX="23.0" layoutY="155.0" onKeyPressed="#OnKeyPressed" prefHeight="26.0" prefWidth="572.0" promptText="Item Name" />
+      <JFXButton fx:id="btnSave" layoutX="678.0" layoutY="76.0" onAction="#btnSaveOnAction" onKeyPressed="#saveEnterClick" prefHeight="26.0" prefWidth="192.0" style="-fx-background-color: #6abf43;" text="SAVE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="678.0" layoutY="128.0" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="192.0" style="-fx-background-color: #ff3c3c;" text="DELETE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnClear" layoutX="678.0" layoutY="179.0" onAction="#btnClearOnAction" prefHeight="26.0" prefWidth="192.0" style="-fx-background-color: YELLOW;" text="CLEAR">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></JFXButton>
+      <TableView fx:id="tblBarcode" layoutX="12.0" layoutY="266.0" onMouseClicked="#tblOnmouseClick" prefHeight="308.0" prefWidth="923.0">
+         <columns>
+            <TableColumn prefWidth="296.0" text="BarCode" />
+            <TableColumn prefWidth="626.0" text="NAME" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="19.0" layoutY="228.0" prefHeight="26.0" prefWidth="434.0" promptText="Search Customer" />
+   </children>
+</AnchorPane>
